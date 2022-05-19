@@ -39,6 +39,20 @@ public class MarkdownParseTest {
         
         assertEquals(links, parsedLinks);
     }
+
+    @Test
+    public void thirdFile() throws IOException {
+	ArrayList<String> links = new ArrayList<String>();
+
+	links.add("https://something.com");
+	links.add("some-thing.html");
+
+	String content = Files.readString(Path.of("test-file3.md");
+	
+	ArrayList <String> parsedLinks = MarkdownParse.getLinks(content);
+
+	assertEquals(links, parsedLinks);
+    }
 }
 
 /**
