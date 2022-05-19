@@ -42,16 +42,17 @@ public class MarkdownParseTest {
 
     @Test
     public void thirdFile() throws IOException {
-	ArrayList<String> links = new ArrayList<String>();
+        ArrayList<String> links = new ArrayList<String>();
 
-	links.add("https://something.com");
-	links.add("some-thing.html");
+        links.add("https://something.com");
+        links.add("some-thing.html");
+        links.add("helloWorld.com");
 
-	String content = Files.readString(Path.of("test-file3.md");
-	
-	ArrayList <String> parsedLinks = MarkdownParse.getLinks(content);
+        String content = Files.readString(Path.of("test-file3.md"));
+        
+        ArrayList <String> parsedLinks = MarkdownParse.getLinks(content);
 
-	assertEquals(links, parsedLinks);
+        assertEquals(links, parsedLinks);
     }
 }
 
